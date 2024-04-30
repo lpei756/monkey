@@ -187,7 +187,7 @@ const Homepage = () => {
 								</Button>
 							)}
 							<a href="https://github.com/lpei756/monkey" target="_blank" rel="noopener noreferrer">
-								
+
 								{/* this color has to be in hex to fix offcanvas bug */}
 								<GithubLogo size={20} color="#94a3b8"/>
 								Made by Mellow Monkeys
