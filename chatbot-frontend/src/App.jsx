@@ -12,10 +12,10 @@ function App() {
 	const { auth } = useAuth();
 	return (
 		<Routes>
-			{/* Rotas não Autenticadas */}
+			{/* Unauthenticated Routes */}
 			<Route path="/login" element={<Login />} />
 			<Route path="/register" element={<Register />} />
-			{/* Rotas Já Autenticadas*/}
+			{/* Routes Already Authenticated*/}
 			<Route
 				element={
 					<ProtectedRoute
