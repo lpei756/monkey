@@ -13,7 +13,7 @@ To run this project, please follow these steps:
 1. Clone the repository to your local machine.
 2. In order to run the application successfully, make sure you have a .env file in the backend folder with the following configuration:
 ``` plaintext
-API_KEY='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'
+API_KEY='sk-proj-HN5BnrY53G7f35nFnWzYT3BlbkFJ76KMo4de6wHlXBpweP3I'
 DB_USER='lpei756'
 DB_PASS='d4GbZMxQNC9zPKnQ'
 JWT_SECRET='q8!@#b78dawdaBA*#@$@#ASDH*&@hdawuihd2a723b*!&@$b3472tbfsal83^@#123casdfasdwa1rf2435671ubn12978$!'
