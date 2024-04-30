@@ -1,5 +1,5 @@
 require("dotenv").config();
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 const express = require("express");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
