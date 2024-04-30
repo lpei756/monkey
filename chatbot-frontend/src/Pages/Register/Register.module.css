@@ -1,6 +1,6 @@
 .register_page {
 	background-color: var(--gray-950);
-	height: 100vh;
+	height: 120vh;
 	width: 100vw;
 
 	display: grid;
