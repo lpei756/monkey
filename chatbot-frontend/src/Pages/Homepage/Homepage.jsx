@@ -182,17 +182,14 @@ const Homepage = () => {
 									onClick={handleEmptyHistory}
 									className={styles.btn_empty_history}
 								>
-									<TrashSimple size={20} />
+									<TrashSimple size={20}/>
 									Empty history
 								</Button>
 							)}
-							<a
-								href="https://github.com/lpei756/monkey"
-								target="_blank"
-								rel="https://github.com/lpei756/monkey noreferrer"
-							>
+							<a href="https://github.com/lpei756/monkey" target="_blank" rel="noopener noreferrer">
+								
 								{/* this color has to be in hex to fix offcanvas bug */}
-								<GithubLogo size={20} color="#94a3b8" />
+								<GithubLogo size={20} color="#94a3b8"/>
 								Made by Mellow Monkeys
 							</a>
 						</span>
