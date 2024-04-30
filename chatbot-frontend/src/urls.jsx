@@ -1,4 +1,4 @@
-export const BASE_URL = "http://127.0.0.1:8000/"
+export const BASE_URL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com/"
 
 // AUTH
 export const REGISTER_URL = BASE_URL + "auth/register"
