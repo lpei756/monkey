@@ -187,9 +187,9 @@ const Homepage = () => {
 								</Button>
 							)}
 							<a
-								href="https://github.com/UOA-CS732-SE750-Students-2024/project-group-mellow-monkeys"
+								href="https://github.com/lpei756/monkey"
 								target="_blank"
-								rel="https://github.com/UOA-CS732-SE750-Students-2024/project-group-mellow-monkeys noreferrer"
+								rel="https://github.com/lpei756/monkey noreferrer"
 							>
 								{/* this color has to be in hex to fix offcanvas bug */}
 								<GithubLogo size={20} color="#94a3b8" />
