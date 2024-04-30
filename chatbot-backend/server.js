@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 
 // MODELS
-const User = require("./models/user");
+const User = require("./models/User");
 
 // CONNECTION TO OPEN AI API
 /*
