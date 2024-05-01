@@ -13,7 +13,7 @@ import { useAuth } from "../../hooks/useAuth";
 import styles from "./UserInfoPage.module.css";
 import { useNavigate } from "react-router-dom";
 
-axios.defaults.baseURL = "http://localhost:8002";
+axios.defaults.baseURL = "http://localhost:8001";
 
 export default function UserInfoPage() {
   const navigate = useNavigate();
