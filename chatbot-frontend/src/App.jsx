@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login/Login";
 import Register from "./Pages/Register/Register";
 import Layout from "./layouts/Layout";
+import UserInfoPage from "./Pages/UserInfoPage/UserInfoPage";
 import { useAuth } from "./hooks/useAuth";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Homepage from "./Pages/Homepage/Homepage";
@@ -15,7 +16,7 @@ function App() {
 			{/* Unauthenticated Routes */}
 			<Route path="/login" element={<Login />} />
 			<Route path="/register" element={<Register />} />
-			{/* Routes Already Authenticated*/}
+			{/* Authenticated Routes*/}
 			<Route
 				element={
 					<ProtectedRoute
@@ -26,6 +27,8 @@ function App() {
 			>
 				<Route path="/" element={<Layout />}>
 					<Route index element={<Homepage />} />
+					<Route path="/user-info" element={<UserInfoPage />} />
+					for user info page
 				</Route>
 			</Route>
 			<Route
