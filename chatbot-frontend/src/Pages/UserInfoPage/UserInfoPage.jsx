@@ -13,7 +13,7 @@ import { useAuth } from "../../hooks/useAuth";
 import styles from "./UserInfoPage.module.css";
 import { useNavigate } from "react-router-dom";
 
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "http://localhost:8001";
 
 export default function UserInfoPage() {
   const navigate = useNavigate();
@@ -135,6 +135,7 @@ export default function UserInfoPage() {
           <Image
             className={styles.userAvatar}
             src={user.avatar}
+            alt="User avatar"
             roundedCircle
           />
           <div className={styles.userInfo}>
@@ -147,6 +148,7 @@ export default function UserInfoPage() {
               className={styles.modifyButton}
               variant="primary"
               onClick={() => setIsEditing(true)}
+              data-testid="modifyButton"
             >
               Modify Personal Information
             </Button>
