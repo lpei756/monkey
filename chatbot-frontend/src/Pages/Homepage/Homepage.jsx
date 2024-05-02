@@ -15,7 +15,7 @@ import { toast } from "react-toastify";
 import { COMPLETIONS } from "../../urls";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-axios.defaults.baseURL = "http://localhost:8001";
+axios.defaults.baseURL = "http://localhost:8000";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -171,7 +171,7 @@ const Homepage = () => {
 
   const generateAvatar = async () => {
     try {
-        const response = await axios.post('http://localhost:8001/generate-avatar', { description });
+        const response = await axios.post('http://localhost:8000/generate-avatar', { description });
         setImageURL(response.data.imageURL);
     } catch (error) {
         console.error('Error generating avatar:', error);
