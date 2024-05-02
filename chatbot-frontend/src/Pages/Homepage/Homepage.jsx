@@ -15,7 +15,7 @@ import { toast } from "react-toastify";
 import { COMPLETIONS } from "../../urls";
 import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-axios.defaults.baseURL = "http://localhost:8000";
+axios.defaults.baseURL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com/";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -171,7 +171,7 @@ const Homepage = () => {
 
   const generateAvatar = async () => {
     try {
-        const response = await axios.post('http://localhost:8000/generate-avatar', { description });
+        const response = await axios.post('https://safe-tundra-20303-6fe75228cb57.herokuapp.com/generate-avatar', { description });
         setImageURL(response.data.imageURL);
     } catch (error) {
         console.error('Error generating avatar:', error);
