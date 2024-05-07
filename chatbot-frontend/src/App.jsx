@@ -8,29 +8,25 @@ import UserInfoPage from "./Pages/UserInfoPage/UserInfoPage";
 import { useAuth } from "./hooks/useAuth";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Homepage from "./Pages/Homepage/Homepage";
+import SurveyPage from "./Pages/Surveypage/Surveypage";
 
 function App() {
-  const { auth } = useAuth();
+  // const { auth } = useAuth();
   return (
     <Routes>
-      {/* Unauthenticated Routes */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+
       {/* Authenticated Routes*/}
-      <Route
-        element={
-          <ProtectedRoute
-            redirectPath="/login"
-            isAllowed={!!auth.isAuthenticated}
-          />
-        }
-      >
+      <Route element={<ProtectedRoute redirectPath="/login" />}>
         <Route path="/" element={<Layout />}>
           <Route index element={<Homepage />} />
           <Route path="/user-info" element={<UserInfoPage />} />
-          for user info page
+          <Route path="/survey" element={<SurveyPage />} />
         </Route>
       </Route>
+
+      {/* Catch-all Route */}
       <Route
         path="*"
         element={

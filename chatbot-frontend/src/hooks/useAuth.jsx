@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import axios from "axios";
 import { REGISTER_URL, LOGIN_URL } from "../urls";
 
@@ -42,7 +42,18 @@ export const AuthProvider = ({ children }) => {
       });
       console.log("submitLogin -> response: ", response);
       if (response.status === 200) {
-        toast.success("Login success");
+        // toast.success("Login success");
+
+        sessionStorage.setItem("token", response.data.token);
+        sessionStorage.setItem(
+          "user",
+          JSON.stringify({
+            id: response.data.user._id,
+            name: response.data.user.name,
+            email: response.data.user.email,
+            avatar: response.data.user.avatar,
+          })
+        );
 
         newAuth.isAuthenticated = true;
         newAuth.isLoading = false;
@@ -50,13 +61,15 @@ export const AuthProvider = ({ children }) => {
         newAuth.id = response?.data?.user?._id;
         newAuth.name = response?.data?.user?.name;
         newAuth.email = response?.data?.user?.email;
-
         newAuth.avatar = response?.data?.user?.avatar;
-
         newAuth.token = response?.data?.token;
+        newAuth.loginTime = response?.data?.user?.loginTime;
 
-        sessionStorage.setItem("token", response.data.token);
-        navigate(from, { replace: true });
+        if (newAuth.loginTime === 1) {
+          navigate("/survey", { replace: true });
+        } else {
+          navigate("/", { replace: true });
+        }
       }
     } catch (error) {
       console.log("submitLogin -> error: ", error);
@@ -68,7 +81,7 @@ export const AuthProvider = ({ children }) => {
     setAuth(newAuth);
   };
 
-  // IT SHOULD BE CHANGED TO REGISTER.
+  // REGISTERATION
   const submitRegister = async (e, userData) => {
     setAuth({ ...auth, isLoading: true });
     if (e) e.preventDefault();
@@ -89,8 +102,8 @@ export const AuthProvider = ({ children }) => {
       });
       console.log("submitRegister -> response: ", response);
       if (response.status === 201) {
-        toast.success("Register success");
-
+        // toast.success("Register success");
+        newAuth.isAuthenticated = true;
         newAuth.isLoading = false;
         newAuth.error = "";
 
@@ -105,11 +118,16 @@ export const AuthProvider = ({ children }) => {
     setAuth(newAuth);
   };
 
+  //New Survey submit
+  const submitSurvey = () => {
+    navigate("/", { replace: true });
+  };
+
   // LOGOUT
   const submitLogout = () => {
     sessionStorage.clear();
     setAuth(initialAuthState);
-    toast.success("Logout success");
+    // toast.success("Logout success");
     navigate("/login", { replace: true });
   };
 
@@ -120,23 +138,30 @@ export const AuthProvider = ({ children }) => {
     return tokenData.exp < currentTime;
   };
 
-  // Checks if there is a token saved in sessionStorage when mounting the component
   useEffect(() => {
     const token = sessionStorage.getItem("token");
-    if (token) {
-      if (!isTokenExpired(token)) {
-        // Valid token, sets the authentication state to authenticated
-        setAuth((prevAuth) => ({
-          ...prevAuth,
-          isAuthenticated: true,
-          isLoading: false,
-          token: token,
-        }));
-      }
-    } else {
-      // No token, sets the authentication state to not authenticated
+    const storedUser = sessionStorage.getItem("user");
+    const user = storedUser ? JSON.parse(storedUser) : null;
+
+    if (token && user && !isTokenExpired(token)) {
       setAuth((prevAuth) => ({
         ...prevAuth,
+        isAuthenticated: true,
+        isLoading: false,
+        token: token,
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        avatar: user.avatar,
+      }));
+    } else {
+      if (!token || isTokenExpired(token)) {
+        sessionStorage.removeItem("token");
+        sessionStorage.removeItem("user");
+      }
+      setAuth((prevAuth) => ({
+        ...prevAuth,
+        isAuthenticated: false,
         isLoading: false,
       }));
     }
@@ -145,7 +170,7 @@ export const AuthProvider = ({ children }) => {
   // pass the value in the provider and return it
   return (
     <AuthContext.Provider
-      value={{ auth, submitLogin, submitRegister, submitLogout }}
+      value={{ auth, submitLogin, submitRegister, submitLogout, submitSurvey }}
     >
       {children}
     </AuthContext.Provider>

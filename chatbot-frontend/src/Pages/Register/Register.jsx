@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Spinner } from "react-bootstrap";
 import styles from "./Register.module.css";
 import { useAuth } from "../../hooks/useAuth";
-import { Robot } from "@phosphor-icons/react";
+// import { Robot } from "@phosphor-icons/react";
 
 export default function Register() {
   const { auth, submitRegister } = useAuth();
@@ -14,31 +14,26 @@ export default function Register() {
 
   const handleSubmitRegister = (e) => {
     e.preventDefault();
-    console.log("handleSubmitRegister", email, name);
+    console.log("handleSubmitRegister", email, name); 
     submitRegister(e, { name, email, password, confirmPassword });
   };
 
   return (
     <div className={styles.register_page}>
-      <div className={styles.register_logo_wrapper}>
-        <Robot size={96} />
-        Bobu
-        <p>AI chatbot</p>
-      </div>
       <Form
         className={styles.register_wrapper}
         onSubmit={(e) => handleSubmitRegister(e)}
       >
-        <div className={styles.register_upper_section}>Registration</div>
+        {/* <div className={styles.register_upper_section}>Registration</div> */}
         <Form.Group
           className={styles.register_form_field}
-          controlId="formBasicUsername"
+          controlId="formBasicName"
         >
-          <Form.Label>Name</Form.Label>
+          {/* <Form.Label>Name</Form.Label> */}
           <Form.Control
             onChange={(e) => setName(e.target.value)}
             value={name}
-            type="username"
+            type="text"
             placeholder="Name"
           />
         </Form.Group>
@@ -47,39 +42,39 @@ export default function Register() {
           className={styles.register_form_field}
           controlId="formBasicEmail"
         >
-          <Form.Label>Email address</Form.Label>
+          {/* <Form.Label>Email address</Form.Label> */}
           <Form.Control
             onChange={(e) => setEmail(e.target.value)}
             value={email}
             type="email"
             placeholder="Email"
           />
-          <Form.Text className="text-muted">
+          {/* <Form.Text className="text-muted">
             We will never share your email with anyone.
-          </Form.Text>
+          </Form.Text> */}
         </Form.Group>
         <Form.Group
           className={styles.register_form_field}
           controlId="formBasicPassword"
         >
-          <Form.Label>Password</Form.Label>
+          {/* <Form.Label>Password</Form.Label> */}
           <Form.Control
             onChange={(e) => setPassword(e.target.value)}
             value={password}
             type="password"
-            placeholder="Password"
+            placeholder="Enter Password"
           />
         </Form.Group>
         <Form.Group
           className={styles.register_form_field}
-          controlId="formBasicPassword"
+          controlId="formBasicConfirmPassword"
         >
-          <Form.Label>Confirm the Password</Form.Label>
+          {/* <Form.Label>Confirm Password</Form.Label> */}
           <Form.Control
             onChange={(e) => setConfirmPassword(e.target.value)}
             value={confirmPassword}
             type="password"
-            placeholder="Password"
+            placeholder="Confirm Password"
           />
         </Form.Group>
         {auth.error && (
@@ -104,7 +99,7 @@ export default function Register() {
                 aria-hidden="true"
               />
             ) : (
-              <>register</>
+              "Register"
             )}
           </Button>
         </Form.Group>

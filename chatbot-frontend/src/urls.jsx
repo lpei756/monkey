@@ -1,5 +1,5 @@
 
-export const BASE_URL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com/"
+export const BASE_URL = "http://127.0.0.1:8001/"
 
 
 // AUTH
