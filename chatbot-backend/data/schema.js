@@ -11,6 +11,7 @@ const userSchema = new Schema(
     email: String,
     avatar: { type: String, default: "avatar1.jpeg" }, // Path or URL to the user avatar image
     password: String,
+    loginTime: { type: Number, default: 0 },
     ChatBots: [{ type: Schema.Types.ObjectId, ref: "ChatBots" }], // This is how we reference a different collection.
   },
   {
@@ -32,8 +33,7 @@ const ChatBotsSchema = new Schema(
     name: { type: String, required: true },
     gender: { type: String, required: true },
     personality: { type: String, required: true },
-    avatar: { type: String, default: "avatar1.jpg" },
-    initialCreatedDate: Date,
+    avatar: { type: String, default: "avatar2.jpeg" },
     descriptions: String,
     user: { type: Schema.Types.ObjectId, ref: "User", required: true },
   },
