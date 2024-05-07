@@ -15,7 +15,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-axios.defaults.baseURL = "http://localhost:8001";
+axios.defaults.baseURL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com/";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const Homepage = () => {
     if (chatScrollRef.current) {
       chatScrollRef.current.scrollTop = chatScrollRef.current.scrollHeight;
     }
-  }, [currentChat]); 
+  }, [currentChat]);
 
   // ////////////////
   useEffect(() => {
@@ -135,7 +135,7 @@ const Homepage = () => {
     }
   }, [auth.id, auth.token]);
 
-  
+
   //UseEffect triggered by message and/or currentTitle state changes
   useEffect(() => {
     if (!currentTitle && value && message) {
@@ -242,7 +242,7 @@ const Homepage = () => {
 		filters the previous chats by the current title and stores
 		the current chat if it matches the current title
 	*/
-  
+
 
   // creates an array of unique titles from the previous chats
   const uniqueTitles = Array.from(
@@ -302,7 +302,7 @@ const Homepage = () => {
 </div>
 
 {/* ////////// */}
-            
+
           {/* CHAT HISTORY */}
           {/* FOOTER */}
           {/* <span >
@@ -320,7 +320,7 @@ const Homepage = () => {
         </section>
       {/* </Offcanvas> */}
       {/* SIDEBAR */}
-            
+
       {/* MAIN */}
       {chatBots.length === 0 || !activeChatbotId ? (
         <section className={styles.main}>

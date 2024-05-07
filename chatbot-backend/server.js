@@ -10,7 +10,7 @@ import openAIRoutes from "./routes/openAI.js";
 import avatarRoutes from "./routes/avatarRoutes.js";
 
 const app = express();
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8000;
 app.use(express.static("public"));
 
 app.use(express.json());
