@@ -13,7 +13,7 @@ import { useAuth } from "../../hooks/useAuth";
 import styles from "./UserInfoPage.module.css";
 import { useNavigate } from "react-router-dom";
 
-axios.defaults.baseURL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com/";
+axios.defaults.baseURL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com";
 
 export default function UserInfoPage() {
   const navigate = useNavigate();

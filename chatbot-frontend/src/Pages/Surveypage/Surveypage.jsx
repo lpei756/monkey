@@ -7,7 +7,7 @@ import Spinner from "react-bootstrap/Spinner";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import { saveAs } from "file-saver";
 
-axios.defaults.baseURL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com/";
+axios.defaults.baseURL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com";
 
 function SurveyPage() {
   const navigate = useNavigate();
@@ -31,7 +31,7 @@ function SurveyPage() {
   };
 
   function createImageUrl(imagePath) {
-    const baseUrl = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com/";
+    const baseUrl = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com";
     const filename = imagePath.split("/").pop();
     const fullUrl = `${baseUrl}/${filename}`;
     return fullUrl;
