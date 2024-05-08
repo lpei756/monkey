@@ -1,9 +1,9 @@
-# Bobu Chatbot - MERN Stack
+# Soulmate Chatbot - MERN Stack
 This repository contains my solution for the challenge of creating a chatbot using the MERN stack and integrating with the OpenAI API.
 
 ## Features
  - User registration and login functionality.
- - Homepage where users can interact with the Bobu chatbot.
+ - Homepage where users can interact with the Soulmate chatbot.
  - Clean code implementation following best practices.
 
 

@@ -14,7 +14,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 
-axios.defaults.baseURL = "http://localhost:8001";
+axios.defaults.baseURL = "https://safe-tundra-20303-6fe75228cb57.herokuapp.com";
 
 const Homepage = () => {
   const navigate = useNavigate();
