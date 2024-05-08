@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/188.jpg");
+  background-image: url("188.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -90,7 +90,7 @@
 	margin: 10px 0;
 	height: 50px;
 	width: 100%;
-	background-color: rgba(64, 228, 253, 0.642); 
+	background-color: rgba(64, 228, 253, 0.642);
 	border-radius: 10px ;
 	color: #ffff;
 	font-weight: 1000;
@@ -104,7 +104,7 @@
 	margin: 10px 0;
 	height: 50px;
 	width: 100%;
-	background-color: rgba(251, 119, 119, 0.642); 
+	background-color: rgba(251, 119, 119, 0.642);
 	border-radius: 10px ;
 	color: #ffff;
 	font-weight: 1000;

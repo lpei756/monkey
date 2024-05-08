@@ -1,18 +1,18 @@
 .login_page {
-	height: 100vh; 
-    width: 100vw; 
+	height: 100vh;
+    width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: url('/188.jpg');
+	background-image: url("188.jpg");
 	background-size: cover;
-    background-repeat: no-repeat; 
-    background-position: center; 
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .login_wrapper {
-	width: 500px; 
-	height: 320px; 
+	width: 500px;
+	height: 320px;
 	display: flex;
 	flex-direction: column;
 	padding: 40px;
@@ -22,7 +22,7 @@
 	background-color: inherit;
 	border-radius: 18px;
 	overflow: hidden;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); 
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .login_wrapper::before {
@@ -49,13 +49,13 @@
 
 
 .login_form_field input::placeholder {
-	font-size: 13px; 
+	font-size: 13px;
 	color: #c8c8c8;
 }
 
 .login_form_field input:focus {
-	outline: none; 
-	box-shadow: 0 0 8px 2px rgba(121, 87, 245, 0.423); 
+	outline: none;
+	box-shadow: 0 0 8px 2px rgba(121, 87, 245, 0.423);
 }
 
 .login_form_login_button {
@@ -63,21 +63,21 @@
 	margin: 10px 0;
 	height: 50px;
 	width: 100%;
-	background-color: rgba(64, 228, 253, 0.642); 
+	background-color: rgba(64, 228, 253, 0.642);
 	border-radius: 10px ;
 	color: #ffff;
 	font-weight: 1000;
 }
 .login_form_login_button:active {
-	background-color: rgb(64, 228, 253) !important; 
+	background-color: rgb(64, 228, 253) !important;
 }
 
 .login_form_login_button:hover {
-	background-color: rgb(64, 228, 253); 
+	background-color: rgb(64, 228, 253);
 }
 
 .login_error_text {
-	color: #fb6f92; 
+	color: #fb6f92;
 }
 
 .login_register_text {

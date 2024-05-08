@@ -2,12 +2,12 @@
   height: 100vh;
   width: 100vw;
   display: flex;
-  align-items: center; 
-  justify-content: center; 
-  background-image: url("/188.jpg");   
-	background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
+  align-items: center;
+  justify-content: center;
+  background-image: url("188.jpg");
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .register_wrapper {
@@ -101,7 +101,7 @@ input {
 
 
 .register_error_text {
-  color: #fb6f92; 
+  color: #fb6f92;
 
 }
 

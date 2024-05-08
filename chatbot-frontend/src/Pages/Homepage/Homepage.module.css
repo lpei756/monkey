@@ -1,10 +1,10 @@
 .homepage {
   display: flex;
   flex-direction: row;
-  background-image: url("/188.jpg");
-	background-size: cover; 
-  background-repeat: no-repeat; 
-  background-position: center; 
+  background-image: url("188.jpg");
+	background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .side_bar {
@@ -97,7 +97,7 @@
   height: 700px;
   overflow-y: auto;
   width: 100%;
-  position: relative;  
+  position: relative;
   padding: 10px;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -108,9 +108,9 @@
   /* 调整创建的模糊遮罩 */
   mask-image: linear-gradient(
     to bottom,
-    transparent 0%, 
-    black 5%,  
-    black 95%, 
+    transparent 0%,
+    black 5%,
+    black 95%,
     transparent 100%
   );
 }
@@ -175,7 +175,7 @@
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
-  
+
 }
 
 .chatbot_entry {
@@ -213,16 +213,16 @@
   height: 20px;
   cursor: pointer;
   margin-right: 20px;
-  background-image: url('/loveYou.png'); 
+  background-image: url('/loveYou.png');
   background-size: cover;
-  filter: brightness(0) saturate(100%) invert(32%) sepia(74%) saturate(5589%) hue-rotate(302deg) brightness(103%) contrast(102%); 
-  opacity: 0.7;  
+  filter: brightness(0) saturate(100%) invert(32%) sepia(74%) saturate(5589%) hue-rotate(302deg) brightness(103%) contrast(102%);
+  opacity: 0.7;
   transition: transform 0.3s ease, background-image 0.3s ease;
 }
 
 .delete_icon:hover {
   transform: scale(1.5);
-  background-image: url('/breakUP.png'); 
+  background-image: url('/breakUP.png');
 }
 
 
@@ -364,7 +364,7 @@
 
 .bottom_wrapper {
   width: 100%;
-  overflow: hidden; 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;

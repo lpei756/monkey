@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url("/188.jpg");
+  background-image: url("188.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -55,7 +55,7 @@
   flex-direction: column;
   align-items: center;
   width: 40%;
-  gap: 1rem; 
+  gap: 1rem;
 } */
 
 /* .userForm {
@@ -74,13 +74,13 @@
 	margin: 10px 0;
 	height: 50px;
 	width: 100%;
-	background-color: rgba(64, 228, 253, 0.642); 
+	background-color: rgba(64, 228, 253, 0.642);
 	border-radius: 10px ;
 	color: #ffff;
 	font-weight: 1000;
 }
 
-.modifyButton:hover, 
+.modifyButton:hover,
 .backHomeButton:hover{
   background-color: rgb(64, 228, 253); }
 
@@ -127,7 +127,7 @@
   padding-right: 12px;
   padding-top: 6px;
   padding-bottom: 6px;
-  
+
 }
 
 .formUserName::placeholder,
@@ -136,7 +136,7 @@
 .formUserConfirmPassword::placeholder {
   font-size: 13px; /* Adjust the font size to your desired size */
 	color: #c8c8c8;
-  
+
 }
 
 .avatarImage {
@@ -167,14 +167,14 @@
 	margin: 10px 0;
 	height: 50px;
 	width: 100%;
-	background-color: rgba(64, 228, 253, 0.642); 
+	background-color: rgba(64, 228, 253, 0.642);
 	border-radius: 10px ;
 	color: #ffff;
 	font-weight: 1000;
 }
 
 .ButtonChange:hover {
-  background-color: rgb(64, 228, 253); 
+  background-color: rgb(64, 228, 253);
 }
 
 .ButtonCancel {
@@ -182,14 +182,14 @@
 	margin: 10px 0;
 	height: 50px;
 	width: 100%;
-	background-color: rgba(251, 119, 119, 0.642); 
+	background-color: rgba(251, 119, 119, 0.642);
 	border-radius: 10px ;
 	color: #ffff;
 	font-weight: 1000;
 }
 
 .ButtonCancel:hover {
-  background-color: rgb(251, 119, 119); 
+  background-color: rgb(251, 119, 119);
 }
 
 .submitForm input:focus {
@@ -197,9 +197,9 @@
   box-shadow: 0 0 8px 2px rgba(121, 87, 245, 0.423); /* 粉红色发光效果 */
 }
 
-.modifyButton:active, 
+.modifyButton:active,
 .modifyButton:focus,
-.backHomeButton:active, 
+.backHomeButton:active,
 .backHomeButton:focus,
 .ButtonChange:active,
 .ButtonChange:focus,
