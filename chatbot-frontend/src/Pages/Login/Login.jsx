@@ -18,7 +18,7 @@ export default function Login() {
   return (
     <div className={styles.login_page}>
       <div className={styles.login_logo_wrapper}>
-      < img src="../../../public/Logo.svg" alt="Logo" />
+      < img src="/Logo.svg" alt="Logo" />
       </div>
       <Form
         className={styles.login_wrapper}
